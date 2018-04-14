@@ -1,5 +1,6 @@
 var express = require('express');
 var fs = require('fs');
+var logger = require('morgan');
 var _ = require('lodash');
 var profile = express.Router();
 var users = [];
@@ -12,6 +13,13 @@ fs.readFile('users.json', {'encoding':'utf8'},function(err,data) {
         users.push(user);
     })
 })
+
+profile.use(function(req,res,next){
+    console.log('middle ware function invoked');
+    next();
+});
+
+profile.use(express.static('public/images'));
 
 profile.get('/', function(req,res) {
     var buffer = '';
