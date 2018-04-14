@@ -1,10 +1,12 @@
 [
     {
         "fname":"sumit",
-        "lname":"pramanik"
+        "lname":"pramanik",
+        "username":"sumitpramanik"
     },
     {
         "fname":"akansha",
-        "lname":"gupta"
+        "lname":"gupta",
+        "username":"akanshagupta"
     }
 ]
